@@ -68,9 +68,9 @@ import { updateUserProfile, completeOnboarding } from '../api/userApi';
 import { getUpdates, createUpdate } from '../api/updateApi';
 import { sendAiMessage } from '../api/aiApi';
 import { connectSocket, disconnectSocket, joinChat, sendMessageSocket, onReceiveMessage, offReceiveMessage, emitUserOnline, onUserStatusChange, offUserStatusChange, emitTypingStart, emitTypingStop, onUserTyping, offUserTyping, emitMessagesRead, onMessagesRead, offMessagesRead, emitMessageReaction, onMessageReaction, offMessageReaction, onNotification, offNotification } from '../api/socket';
+import { API_BASE_URL } from '../api/config';
 import { useNavigate } from 'react-router-dom';
 
-const API_BASE_URL = 'http://localhost:5000';
 const NAV_TABS = ['chats', 'ai', 'communities', 'groups', 'updates', 'events', 'settings'];
 const QUICK_REACTIONS = ['👍', '❤️', '😂', '🎉', '😮'];
 

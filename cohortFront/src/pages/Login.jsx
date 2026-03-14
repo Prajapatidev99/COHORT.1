@@ -6,6 +6,7 @@ import { loginUser } from "../api/auth.js";
 import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
+import { API_URL } from '../api/config';
 
 
 
@@ -70,7 +71,7 @@ const LoginPage = () => {
       console.log("Login submitted:", formData);
 
       try {
-        const res = await axios.post("http://localhost:5000/api/auth/login", {
+        const res = await axios.post(`${API_URL}/auth/login`, {
           email: formData.email,
           password: formData.password,
         });

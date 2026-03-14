@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import axios from "axios";
+import { API_URL } from "../api/config";
 
 const PrivateRoute = ({ children }) => {
   const [loading, setLoading] = useState(true);
@@ -18,7 +19,7 @@ const PrivateRoute = ({ children }) => {
 
       try {
         // GET request to backend profile route
-        await axios.get("http://localhost:5000/api/user/profile", {
+        await axios.get(`${API_URL}/user/profile`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

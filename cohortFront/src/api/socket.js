@@ -1,6 +1,5 @@
 import { io } from 'socket.io-client';
-
-const SOCKET_URL = 'http://localhost:5000';
+import { SOCKET_URL } from './config';
 
 // Initialize socket connection
 const socket = io(SOCKET_URL, {

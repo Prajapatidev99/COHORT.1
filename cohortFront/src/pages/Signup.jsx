@@ -7,6 +7,7 @@ import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import { checkUsername } from '../api/authApi';
+import { API_URL } from '../api/config';
 
 
 
@@ -125,7 +126,7 @@ const SignupPage = () => {
 
     if (Object.keys(newErrors).length === 0) {
       try {
-        const res = await axios.post("http://localhost:5000/api/auth/register", {
+        const res = await axios.post(`${API_URL}/auth/register`, {
           name: formData.fullName,
           username: formData.username,
           email: formData.email,

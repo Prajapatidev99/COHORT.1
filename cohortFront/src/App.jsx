@@ -3,7 +3,7 @@ import React from 'react';
 
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/homePage";
 import LandingPage from "./components/LandingPage";
 import PrivateRoute from "./components/PrivateRoute";
 import './style/index2.css';
